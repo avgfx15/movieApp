@@ -18,7 +18,7 @@ export const getMovieData = async () => {
 
 export const getMovieDetails = async ({ params }) => {
   const { movieId } = params;
-  console.log(movieId);
+
   try {
     const result = await fetch(
       `http://www.omdbapi.com/?i=${movieId}&apikey=${
@@ -27,7 +27,7 @@ export const getMovieDetails = async ({ params }) => {
     );
 
     const data = await result.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     console.error('Error fetching API data:', error);

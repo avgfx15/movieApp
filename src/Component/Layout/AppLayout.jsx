@@ -5,7 +5,7 @@ import LoadingPage from '../../Pages/LoadingPage';
 
 const AppLayout = () => {
   const navigation = useNavigation();
-  console.log(navigation);
+
 
   if (navigation.state === 'loading') return <LoadingPage />;
   return (
